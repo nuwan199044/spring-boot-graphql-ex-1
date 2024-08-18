@@ -30,9 +30,10 @@ public class InventoryClient {
 
     public List<ItemDTO> viewProductsByCategory(String category) {
         String graphQLQuery = String.format("query GetProductsByCategory {\n" +
-                "    getProductsByCategory(category: %s) {\n" +
+                "    getProductsByCategory(category: \"%s\") {\n" +
                 "        name\n" +
                 "        category\n" +
+                "        price\n" +
                 "        stock\n" +
                 "    }\n" +
                 "}", category);
